@@ -294,7 +294,7 @@ class SiftFeature():
             if x1>=image.shape[1] or y1>=image.shape[0]:
                 continue
             cv2.circle(image,center=(y1,x1),radius=2,color=(0,255,0))
-            theta_per = np.pi/len(feature_roi)
+            theta_per = np.pi*2/len(feature_roi)
             for k in range(len(feature_roi)):
                 mag = feature_roi[k]
                 if mag>10**(-6):
